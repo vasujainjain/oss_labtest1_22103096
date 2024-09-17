@@ -1,0 +1,26 @@
+import numpy as np
+Patient_list=np.array([[10,"rahul","dr.mohan",1200,"haemorrahge"],[11,"sahil","dr.vikas",2000,"st
+omach infection"],[12,"sanyam","dr.siddarth",1000,"chest
+pain"],[13,"akshit","dr.nishant",5000,"joint pain"],[14,"ritvish","dr.vasu",3500,"sensitive teeth"]])
+Doctor_list=np.array([[100,"dr.mohan","neuro"],[101,"dr.vikas","gastro"],[102,"dr.siddarth","cardio
+"],[103,"dr.nishant","ortho"],[104,"dr.vasu","dentist"]])
+print(Patient_list)
+print(Doctor_list)
+def find(doctor_id):
+for x in range(5):
+if Doctor_list[x][0]==doctor_id:
+print(Patient_list[x][1])
+doctor_id=101
+find(doctor_id)
+def minmax():
+for x in range(5):
+doctor_id=Doctor_list[x][0]
+print(doctor_id)
+minmax()
+def bill():
+for x in range(5):
+minbill=Patient_list[x][3].min()
+maxbill=Patient_list[x][3].max()
+print(minbill)
+print(maxbill)
+bill()
